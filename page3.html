@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css" />
+    <style>
+      .details-wrapper {
+        background: white;
+        border-radius: 12px;
+        padding: 24px;
+        margin: 32px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .detail-item {
+        margin-bottom: 20px;
+      }
+
+      .detail-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .detail-item label {
+        color: #f26722;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        display: block;
+      }
+
+      .detail-item p {
+        color: #505050;
+        font-size: 16px;
+        margin: 8px 0;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-wrapper">
+        <img
+          class="logo"
+          src="https://mulahpictures.s3-ap-southeast-1.amazonaws.com/mulah_logo.png"
+          alt="logo"
+        />
+      </div>
+      <div class="header">
+        <div class="main-header">Success!</div>
+        <div class="sub-header">Here are your details:</div>
+      </div>
+      <div class="details-wrapper">
+        <div class="detail-item">
+          <label>Phone Number:</label>
+          <p id="phoneDisplay"></p>
+        </div>
+        <div class="detail-item">
+          <label>Name:</label>
+          <p id="nameDisplay"></p>
+        </div>
+        <div class="detail-item">
+          <label>Birthday:</label>
+          <p id="birthdayDisplay"></p>
+        </div>
+        <div class="detail-item">
+          <label>Email:</label>
+          <p id="emailDisplay"></p>
+        </div>
+      </div>
+      <div class="footer">Powered by <span>MulahRewards.com</span></div>
+    </div>
+    <script>
+      const phoneNumber = localStorage.getItem("phoneNumber");
+      const formData = JSON.parse(localStorage.getItem("formData"));
+      document.getElementById("phoneDisplay").textContent = phoneNumber;
+      document.getElementById("nameDisplay").textContent = formData.name;
+      document.getElementById("birthdayDisplay").textContent =
+        formData.birthday;
+      document.getElementById("emailDisplay").textContent = formData.email;
+    </script>
+  </body>
+</html>

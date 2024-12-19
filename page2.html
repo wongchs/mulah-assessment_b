@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-wrapper">
+        <img
+          class="logo"
+          src="https://mulahpictures.s3-ap-southeast-1.amazonaws.com/mulah_logo.png"
+          alt="logo"
+        />
+      </div>
+      <div class="header">
+        <div class="main-header">Registration</div>
+        <div class="sub-header">Please fill up your details.</div>
+      </div>
+      <div class="input-container">
+        <div class="name">
+          <label for="name">Name</label>
+          <input
+            class="name-input"
+            type="text"
+            id="nameInput"
+            placeholder="Enter name"
+          />
+          <div class="error-message" id="errorMessage">
+            *Please insert a name.
+          </div>
+        </div>
+        <div class="birthday">
+          <label for="birthday">Birthday</label>
+          <div class="birthday-inputs">
+            <input type="text" id="day" placeholder="DD" maxlength="2" />
+            <input type="text" id="month" placeholder="MM" maxlength="2" />
+            <input type="text" id="year" placeholder="YYYY" maxlength="4" />
+          </div>
+          <div class="error-message" id="errorMessage">
+            *Please insert your birthday.
+          </div>
+        </div>
+        <div class="email">
+          <label for="email">Email</label>
+          <input
+            class="email-input"
+            type="email"
+            id="emailInput"
+            placeholder="Enter Address"
+          />
+          <div class="error-message" id="errorMessage">
+            *Please insert a valid email address.
+          </div>
+          <div class="no-email-wrapper">
+            <input type="checkbox" id="no_email" />
+            <label for="no_email">No Email Address</label>
+          </div>
+        </div>
+      </div>
+      <button class="submit">Continue</button>
+      <div class="footer">Powered by <span>MulahRewards.com</span></div>
+    </div>
+    <script src="script2.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-wrapper">
+        <img
+          class="logo"
+          src="https://mulahpictures.s3-ap-southeast-1.amazonaws.com/mulah_logo.png"
+          alt="logo"
+        />
+      </div>
+      <div class="header">
+        <div class="main-header">
+          Hello, <br />
+          Welcome !
+        </div>
+        <div class="sub-header">Check Your Loyalty Points & Rewards</div>
+      </div>
+      <div class="input-container">
+        <select class="prefix-select">
+          <option value="+60">+60</option>
+        </select>
+        <div class="input-wrapper">
+          <input
+            class="tel-input"
+            type="tel"
+            id="phoneInput"
+            placeholder="Enter mobile number"
+            maxlength="11"
+          />
+          <img class="checkmark" src="check-mark-svgrepo-com.svg" alt="" />
+        </div>
+      </div>
+      <div class="error-message" id="errorMessage">Invalid phone number. Please try again.</div>
+      <button class="submit">Check Loyalty Points</button>
+      <div class="footer">Powered by <span>MulahRewards.com</span></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
